@@ -29,6 +29,3 @@ Instale as dependências com:
 ```bash
 pip install -r requirements.txt
 
-```bash
-python super_vio.py
-
