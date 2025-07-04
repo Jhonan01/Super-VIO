@@ -1,16 +1,28 @@
-# Super-VIO (Visual-Inertial Odometry com SuperPoint, SuperGlue e IMU)
+# Super-VIO
 
-**Super-VIO** é um sistema de Visual-Inertial Odometry que utiliza pares de imagens nadir, correspondência de pontos via SuperPoint + SuperGlue, e dados de IMU para estimar a pose absoluta do sensor com escalonamento real. Ideal para ambientes onde dados visuais e inerciais são sincronizados e disponíveis.
+**Super-VIO** (Visual-Inertial Odometry com SuperGlue + IMU) é uma pipeline que estima a trajetória de um drone (ou câmera nadir) usando correspondência de features visuais (SuperPoint + SuperGlue) e dados de movimento da IMU para recuperar a escala real. Os resultados são comparados com o Ground Truth (posições reais) para avaliação.
 
-## 📌 Requisitos
+---
+
+## 📌 Funcionalidades
+
+- Detecção e correspondência robusta de features com SuperPoint e SuperGlue.
+- Estimativa de pose relativa com Homografia + PnP.
+- Cálculo da escala real usando dados da IMU (fusão visual-inercial).
+- Atualização incremental da pose acumulada em forma de matriz homogênea.
+- Visualização em tempo real da trajetória estimada vs ground truth.
+- Exibição das correspondências de features entre imagens consecutivas.
+
+---
+
+## 🛠️ Requisitos
 
 - Python 3.8+
-- CUDA (opcional, mas recomendado)
+- OpenCV 4.5+
 - PyTorch
-- OpenCV (>=4.5)
 - matplotlib
 - pandas
-- numpy
+- NumPy
 
 Instale as dependências com:
 
