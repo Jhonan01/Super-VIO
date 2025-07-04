@@ -28,3 +28,22 @@ Instale as dependências com:
 
 ```bash
 pip install -r requirements.txt
+
+---
+
+## ▶️ Como Executar
+
+Certifique-se de que:
+
+- As **imagens nadir** estão na pasta `nadir_images_03/`, nomeadas sequencialmente (`0.png`, `1.png`, ...).
+- O **arquivo CSV** com os dados da IMU e ground truth está disponível como `fusion_data_03.csv`, com as seguintes colunas:
+  - `sensor_north_position_delta_meters`
+  - `sensor_east_position_delta_meters`
+  - `real_north_position_meters`
+  - `real_east_position_meters`
+
+### Para rodar:
+
+```bash
+python super_vio.py
+
